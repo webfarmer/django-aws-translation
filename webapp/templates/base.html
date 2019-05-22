@@ -1,0 +1,43 @@
+{% load staticfiles i18n %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - {% trans "AWS Translation" %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="{% static "css/base.css" %}?v={{ VERSION }}" rel="stylesheet" />
+    {% block css %}{% endblock %}
+    {% block js %}{% endblock %}
+</head>
+<body>
+    <section>
+    <div class="text-center">
+        <table>
+            <tr>
+                <td id="lang-block">
+                    <h1>{% trans "Select Language:" %}</h1>
+                    <ul>
+                        <li><span class="en"></span><a href="?lang=en">English</a></li>
+                        <li><span class="es"></span><a href="?lang=es">español</a></li>
+                        <li><span class="tr"></span><a href="?lang=tr">Türk</a></li>
+                        <li><span class="de"></span><a href="?lang=de">Deutsch</a></li>
+                        <li><span class="fr"></span><a href="?lang=fr">français</a></li>
+                        <li><span class="ja"></span><a href="?lang=ja">日本語</a></li>
+                    </ul>
+                </td>
+                <td>
+                    <h1>{% trans "Select Page:" %}</h1>
+                    <ul>
+                        {% for page_item in PAGE_LIST %}
+                            <li><a href="{% url "page" page_item.get_translation.slug %}">{{ page_item.get_translation.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+        {% block container %}{% endblock %}
+    </section>
+</body>
+</html>

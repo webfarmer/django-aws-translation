@@ -1,0 +1,28 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Activated Pico Devices</title>
+    <link href="{% static "foundation/css/foundation.min.css" %}?v={{ VERSION }}" rel="stylesheet" />
+    <link href="{% static "css/base.css" %}?v={{ VERSION }}" rel="stylesheet" />
+    {% block css %}{% endblock %}
+
+    <script src="{% static "js/jquery.min.js" %}?v={{ VERSION }}" type="text/javascript"></script>
+    <script src="{% static "js/jquery-ui/jquery-ui.min.js" %}?v={{ VERSION }}" type="text/javascript"></script>
+    <script src="{% static "foundation/js/vendor/foundation.min.js" %}" type="text/javascript"></script>
+
+    {% block extrahead %}{% endblock %}
+</head>
+<body>
+    <div id="footer-block" class="grid-container">
+        <div class="grid-x">
+            <div class="row">
+                <h1>Activated Pico Devices</h1>
+                <h6>Between 1st Oct and 31st Dec</h6>
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

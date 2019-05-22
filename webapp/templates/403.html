@@ -1,0 +1,13 @@
+{% extends "auth/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "403 - Forbidden" context "403_title" %}{% endblock %}
+{% block page-header %}{% trans "403 - Forbidden" context "403_page_header" %}{% endblock %}
+
+{% block content %}
+    <div class="text-center links">
+        <p>
+            {% trans "You do not have the correct permission to view this page." context "403_content" %}
+        </p>
+    </div>
+{% endblock %}

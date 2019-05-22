@@ -1,0 +1,17 @@
+{% extends "auth/base.html" %}
+{% load i18n %}
+
+{% block title %}{% trans '500 - Internal Server Error' context "500_title" %}{% endblock %}
+{% block page-header %}{% trans "500 - Internal Server Error" context "500_page_header" %}{% endblock %}
+
+{% block content %}
+    <div class="text-center links"><p>
+        {% blocktrans context "500_content" %}
+            There's been an error.<br/>
+            It's been reported to the site administrators via email and should be fixed shortly. <br/>
+            Thanks for your patience.<br/>
+        {% endblocktrans %}</p>
+    </div>
+{% endblock %}
+
+

@@ -1,0 +1,14 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block extrahead %}
+    {{ block.super }}
+    <link href="{% static "css/admin.css" %}?v={{ VERSION }}" rel="stylesheet" />
+{% endblock %}
+
+{% block title %}{{ title }} | {{ site_title|default:'Snuza Site Admin' }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:'Snuza.com Connect Admin Portal' }}</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

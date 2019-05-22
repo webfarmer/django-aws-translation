@@ -1,0 +1,13 @@
+{% extends "auth/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "400 - Authorised" context "400_title" %}{% endblock %}
+{% block page-header %}{% trans "400 - Authorised" context "400_page_header" %}{% endblock %}
+
+{% block content %}
+    <div class="text-center links">
+        <p>
+            {% trans "You are not authorised to view this page." context "400_content"  %}
+        </p>
+    </div>
+{% endblock %}

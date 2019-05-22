@@ -1,0 +1,14 @@
+{% extends "admin/change_form.html" %}
+{% load static %}
+
+{% block breadcrumbs %}
+    <ul class="object-tools-lang">
+        <li><a {% if set_lang == "en" or not set_lang %}class="active"{% endif %} href="?language=en"><img src="{% static "img/flags/icons/en.png" %}" title="English" /></a></li>
+        <li><a {% if set_lang == "es" %}class="active"{% endif %} href="?language=es"><img src="{% static "img/flags/icons/es.png" %}" title="español" /></a></li>
+        <li><a {% if set_lang == "tr" %}class="active"{% endif %} href="?language=tr"><img src="{% static "img/flags/icons/tr.png" %}" title="Türk" /></a></li>
+        <li><a {% if set_lang == "de" %}class="active"{% endif %} href="?language=de"><img src="{% static "img/flags/icons/de.png" %}" title="Deutsch" /></a></li>
+        <li><a {% if set_lang == "fr" %}class="active"{% endif %} href="?language=fr"><img src="{% static "img/flags/icons/fr.png" %}" title="français" /></a></li>
+        <li><a {% if set_lang == "ja" %}class="active"{% endif %} href="?language=ja"><img src="{% static "img/flags/icons/ja.png" %}" title="日本語" /></a></li>
+    </ul>
+    {{ block.super }}
+{% endblock %}

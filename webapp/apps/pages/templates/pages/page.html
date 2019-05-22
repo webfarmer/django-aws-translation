@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{{ page.get_translation.title }}{% endblock %}
+
+{% block page-header %}{{ page.get_translation.title }}{% endblock %}
+
+{% block container %}
+    <p>
+        {{ page.get_translation.content|safe }}
+    </p>
+{% endblock %}
