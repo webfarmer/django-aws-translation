@@ -19,10 +19,15 @@ Well firstly - look inside /admin/ - click the Pages Model, and go and add pages
 You'll notice that TinyMCE is added, but also that there's a little AWS icon next to the textbox and textareas.
 
 You'll need to go inside the settings.py file and configure these variables if you want this feature to work:
+
 AWS_ACCESS_KEY_ID = ""
+
 AWS_SECRET_ACCESS_KEY = ""
+
 AWS_REGION_NAME = 'us-east-1'
+
 AWS_CLIENT_ID = ""
+
 
 Which shouldn't be too hard provided you follow this: https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys
 
